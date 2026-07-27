@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#10251d">
+  <meta name="description" content="Ghid interactiv pentru un tur de șase zile prin Apuseni și pe Transalpina — ciclist și familie.">
+  <title>Tour de Apuseni & Transalpina</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://tile.openstreetmap.org">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="hero">
+    <nav class="topbar shell">
+      <a class="brand" href="#top" aria-label="Acasă">
+        <span class="brand-mark">↟</span>
+        <span>Tour de Apuseni</span>
+      </a>
+      <div class="top-actions">
+        <button class="icon-button" id="themeToggle" aria-label="Schimbă tema">☼</button>
+        <a class="button button-ghost compact" href="#checklist">Checklist</a>
+      </div>
+    </nav>
+
+    <div id="top" class="hero-content shell">
+      <p class="eyebrow">6 zile · cursieră + familie</p>
+      <h1>Apuseni până pe<br><span>acoperișul Transalpinei</span></h1>
+      <p class="hero-lead">
+        Un ghid comun, cu traseul ciclistului, program accesibil familiei,
+        întâlniri la prânz, obiective și navigație Google Maps.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#days">Deschide traseele</a>
+        <button class="button button-secondary" id="installButton" hidden>Instalează pe telefon</button>
+      </div>
+      <div class="summary-grid" id="summaryGrid"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="shell intro-section">
+      <div>
+        <p class="section-kicker">Cum folosiți ghidul</p>
+        <h2>Două programe, un singur punct de întâlnire</h2>
+      </div>
+      <div class="intro-copy">
+        <p>Tu urmezi track-ul GPX și opririle cu cel mai bun raport timp–experiență. Familia are un program separat, adaptat bunicii, copilului de 5 ani și bebelușului purtat în Manduca.</p>
+        <p>Ora mesei se stabilește ca interval de aproximativ 60 de minute. Cu 30–45 de minute înainte, trimiți poziția și ETA, unde există semnal.</p>
+      </div>
+    </section>
+
+    <section id="days" class="days-section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Itinerar</p>
+            <h2>Planul pe zile</h2>
+          </div>
+          <div class="role-switch" aria-label="Filtrează planul">
+            <button class="role-btn active" data-role="all">Ambele</button>
+            <button class="role-btn" data-role="cyclist">Ciclist</button>
+            <button class="role-btn" data-role="family">Familie</button>
+          </div>
+        </div>
+        <div class="day-tabs" id="dayTabs" role="tablist"></div>
+        <article id="dayView" class="day-view"></article>
+      </div>
+    </section>
+
+    <section id="checklist" class="shell checklist-section">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">În mașina de suport</p>
+          <h2>Checklist comun</h2>
+        </div>
+      </div>
+      <div class="checklist-grid">
+        <label><input type="checkbox"> 2 bidoane pregătite</label>
+        <label><input type="checkbox"> Apă și electroliți</label>
+        <label><input type="checkbox"> Banane și sandvișuri</label>
+        <label><input type="checkbox"> Cameră / kit tubeless</label>
+        <label><input type="checkbox"> Pompă și leviere</label>
+        <label><input type="checkbox"> Baterie externă</label>
+        <label><input type="checkbox"> Jachetă și mănuși</label>
+        <label><input type="checkbox"> Haine uscate</label>
+        <label><input type="checkbox"> Cremă solară</label>
+        <label><input type="checkbox"> Trusă medicală</label>
+        <label><input type="checkbox"> Manduca și protecție ploaie</label>
+        <label><input type="checkbox"> Gustări și scutece copii</label>
+      </div>
+    </section>
+
+    <section class="shell safety-section">
+      <div class="safety-card">
+        <div class="safety-icon">!</div>
+        <div>
+          <p class="section-kicker">Înainte de plecare</p>
+          <h2>Verificați vremea, drumurile și restaurantele</h2>
+          <p>Programul localurilor, starea sectoarelor montane și restricțiile Transalpinei se pot schimba. Rezervați mesele și verificați situația rutieră în dimineața fiecărei etape.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <p>Tour de Apuseni & Transalpina</p>
+    <p>Site static · fără cont · fără backend · hărți OpenStreetMap</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

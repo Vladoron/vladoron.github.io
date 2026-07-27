@@ -1,0 +1,16 @@
+{
+  "name": "Tour de Apuseni & Transalpina",
+  "short_name": "Tour Apuseni",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f1f3ed",
+  "theme_color": "#10251d",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
